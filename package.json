@@ -17,7 +17,7 @@
 		"ts": "tsc",
 		"check": "npm run lint && npm run ts",
 		"check:full": "npm run check && npm run coverage && npm audit && npm outdated",
-		"publish": "npm run build && cd dist && npm publish"
+		"publish": "npm run build && cd dist && npm publish --access public"
 	},
 	"homepage": "https://github.com/suns-echoes/function-utils",
 	"repository": {
