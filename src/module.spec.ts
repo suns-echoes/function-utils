@@ -21,7 +21,7 @@ async function findMethods(path: string, url: string, _members: string[] = []): 
 			});
 		}
 		else if (stat.isDirectory()) {
-			findMethods(entityPath, `${url}${entity}/`, _members);
+			await findMethods(entityPath, `${url}${entity}/`, _members);
 		}
 	}
 
