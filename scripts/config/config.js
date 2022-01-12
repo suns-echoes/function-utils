@@ -16,7 +16,6 @@ export const config = {
 		override: {
 			main:  './cjs/index.js',
 			types: './cjs/index.d.ts',
-			files: ['./cjs/'],
 		},
 	},
 
