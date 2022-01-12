@@ -1,6 +1,8 @@
 import { lstatSync, readdirSync } from 'fs';
-import { join } from 'path';
+import Lib from './index';
+
 import { FunctionUtils as NamedLib } from './function-utils';
+import { join } from 'path';
 
 const sourceFilesFilter = /^.+?(?<!\.spec)\.(?:js|ts)$/;
 
@@ -25,12 +27,15 @@ async function findMethods(path: string, url: string, _members: string[] = []): 
 
 	return _members;
 }
-
-describe('Module named export', () => {
+describe('Module', () => {
 	it('exports all existing methods', async () => {
 		const exportedMethods = Object.keys(NamedLib);
 		const foundMethods = await findMethods('./src/utils/', './utils/');
 
 		expect(exportedMethods).to.be.eql(foundMethods);
+	});
+
+	it('exports as default', () => {
+		expect(Lib).to.be.eql(NamedLib);
 	});
 });
