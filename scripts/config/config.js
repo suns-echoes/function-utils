@@ -6,9 +6,9 @@ export const config = {
 
 	// Distributable version of package.json file.
 	package_json: {
-		whitelist: {
-			'*': true,
-		},
+		whitelist: [
+			'*',
+		],
 		blacklist: [
 			'scripts',
 			'devDependencies',
