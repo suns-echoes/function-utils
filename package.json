@@ -1,6 +1,6 @@
 {
 	"name": "@suns-echoes/function-utils",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "The library with function utilities.",
 	"keywords": [
 		"function",
@@ -45,5 +45,8 @@
 		"sinon-chai": "^3.7.0",
 		"ts-node": "^10.5.0",
 		"typescript": "^4.5.5"
+	},
+	"peerDependencies": {
+		"@suns-echoes/ts-types": "^0.0.1"
 	}
 }
